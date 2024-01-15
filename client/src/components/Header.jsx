@@ -70,53 +70,80 @@ function Header(props) {
                 </li>
               </ul>
             </li>
+
             <li className="nav-item dropdown">
-              <a
+              <Link
+                to=""
                 className="nav-link dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Les animations
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item">Temps de jeux pour tous</a>
+                  <Link to="/JeuxPourTous" className="dropdown-item">
+                    Temps de jeux pour tous
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">Temps de grands jeux en bois</a>
+                  <Link to="/GrandJeux" className="dropdown-item">
+                    Temps de grands jeux en bois
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">Temps de jeux à thème</a>
+                  <Link to="/JeuxTheme" className="dropdown-item">
+                    Temps de jeux à thème
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">Temps de jeux coopératifs</a>
+                  <Link to="/JeuxCooperatifs" className="dropdown-item">
+                    Temps de jeux coopératifs
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Le prêt de jeu
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item">Prêts aux particuliers</a>
+                  <Link to="/Particuliers" className="dropdown-item">
+                    Prêts aux particuliers
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">Prêts aux structures</a>
+                  <Link to="/Structures" className="dropdown-item">
+                    Prêts aux structures
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">Prêts grands jeux</a>
+                  <Link to="/GrandJeuxPret" className="dropdown-item">
+                    Prêts grands jeux
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item">La carte cadeau Cékankonjou</a>
+                  <Link to="/CarteCadeau" className="dropdown-item">
+                    La carte cadeau Cékankonjou
+                  </Link>
                 </li>
               </ul>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/temporaires"
+                className="nav-link active"
+                aria-current="page"
+              >
+                Les Ludothèques temporaires
+              </Link>
             </li>
             <li className="nav-item">
               <Link to="/jeux" className="nav-link active" aria-current="page">
@@ -132,7 +159,8 @@ function Header(props) {
                 Demande d'animation
               </Link>
             </li>
-            <li className="nav-item">
+
+            {/* <li className="nav-item">
               <Link
                 to={"/login"}
                 className="nav-link active"
@@ -140,7 +168,7 @@ function Header(props) {
               >
                 Utilisateur
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="navbar-text">{login}</div>
