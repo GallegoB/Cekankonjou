@@ -57,10 +57,10 @@ function Home(props) {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <p></p>
+      <p class="text-center">Suivez nous sur Facebook !!! </p>
 
-      <p class="has-text-align-center">Suivez nous sur Facebook !!! </p>
-
-      <div class="">
+      <div class="text-center">
         <a
           href="https://www.facebook.com/ludotheque.cekankonjou"
           target="_blank"
@@ -77,6 +77,68 @@ function Home(props) {
             sizes="(max-width: 149px) 100vw, 149px"
           />
         </a>
+      </div>
+      <p></p>
+      <div class="text-center">
+        <form
+          id="sib-form"
+          method="POST"
+          action="https://b2a056a9.sibforms.com/serve/MUIEAGI6X8yS36oaRWpLiBjvpUAkqS2ZRJg-fi6Dnes4Zf3WFz44-nTzOqphlP3THWgUflbx59Jd9bxbGAqK385Na8wZ8qnQK3JTGklJTrXYATZf4xqWQtAasODrZLX-chfHp5azUNwyJy_lGKElriW1ud7KzBYD3MVPYS4Ib-sprxngj6Lc2X6o_04c_024okqCXGmzWnFLJ7k4"
+          data-type="subscription"
+          novalidate="true"
+        >
+          <div>
+            <div class="sib-form-block">
+              <p>CekankonNEWS !</p>
+            </div>
+          </div>
+          <div>
+            <div class="sib-form-block">
+              <div class="sib-text-form-block">
+                <p>
+                  Inscrivez-vous à notre newsletter pour suivre nos actualités.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row ">
+                  <label class="entry__label" for="EMAIL" data-required="*">
+                    Veuillez renseigner votre adresse email pour vous inscrire
+                  </label>
+
+                  <div>
+                    <input
+                      class="input"
+                      type="text"
+                      id="EMAIL"
+                      name="EMAIL"
+                      autocomplete="off"
+                      placeholder="EMAIL"
+                      data-required="true"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <label class="entry__error entry__error--primary"></label>
+                <label class="entry__specification">
+                  Veuillez renseigner votre adresse email pour vous inscrire.
+                  Ex. : abc@xyz.com
+                </label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="sib-form-block">
+              <button class="btn btn-primary" form="sib-form" type="submit">
+                S’INSCRIRE
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
