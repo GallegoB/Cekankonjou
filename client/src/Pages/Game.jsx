@@ -5,14 +5,16 @@ import GameProfile from "../components/GameProfile";
 
 function Game(props) {
   const { id } = useParams();
-  const [game, setGame] = useState({});
+  const [game, setGame] = useState([]);
+  console.log(id);
   useEffect(() => {
     axios.get("/api/games/" + id).then((result) => setGame(result.data));
   }, [id]);
+  console.log(game.length);
   return (
     <div className="col-lg-4 col-md-5 col-xs-6 mb-2">
-      {game.nameJeu ? (
-        <GameProfile game={game} complete />
+      {game.length ? (
+        <GameProfile game={game[0]} complete />
       ) : (
         <div className="d-flex col-3 mb-3-justifity-content-center">
           <div className="spinner-border text-primary" role="status">

@@ -7,13 +7,11 @@ function GameList(props) {
   const [games, setGames] = useState([]);
   console.log(games);
   useEffect(() => {
-    // version Fecth
-    //fetch("/api/games")
-    //  .then((res) => res.json())
-    //  .then((res) => setGames(res.data));
-
     // version Axios
-    axios.get("/api/games").then((result) => setGames(result.data));
+    axios
+      .get("/api/games")
+      .then((result) => setGames(result.data))
+      .catch((err) => console.log(err));
   }, []);
 
   const [searchCriteria, setCriteria] = useState("");
@@ -70,17 +68,18 @@ function GameList(props) {
   return (
     <div>
       <h1>Liste des Jeux</h1>
-      <div className="mb-1">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Recherche titre jeu"
-          onChange={handleSearch}
-        />
-      </div>
 
       <div className="row">
-        <div className="col-2">
+        <div className="col-lg-3 col-md-4 col-xs-6 mb-1">
+          <h4>Recherche</h4>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Recherche titre jeu"
+            onChange={handleSearch}
+          />
+        </div>
+        <div className="col-lg-3 col-md-4 col-xs-6 mb-1">
           <div className="align-items-center">
             <h4>Ages</h4>
             <select
@@ -101,7 +100,7 @@ function GameList(props) {
             </select>
           </div>
         </div>
-        <div className="col-2 align-items-center">
+        <div className="col-lg-3 col-md-4 col-xs-6 mb-1">
           <div className="align-items-center">
             <h5>Nombre de Joueur</h5>
             <select
@@ -132,14 +131,14 @@ function GameList(props) {
             filteredGames.map((game, index) => (
               <div
                 key={index}
-                className="col-lg-3 col-md-4 col-xs-6 mb-1"
+                className="col-mb-6 col-md-4 col-lg-3 col-xl-2"
                 onClick={() => navigate("/Jeux/" + game.id)}
                 style={{ cursor: "pointer" }}
               >
                 <GameProfile
                   game={game}
                   deleteGame={deleteGame}
-                  className="col-3"
+                  className="col-6-justifity-content-center"
                 />{" "}
               </div>
             ))
